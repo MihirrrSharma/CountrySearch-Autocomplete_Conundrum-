@@ -1,0 +1,90 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+    background-color: #f7f7f7; /* Light background color */
+    flex-direction: column; /* Stack items vertically */
+}
+
+/* Style the main content */
+.container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 36px;
+    color: #333; /* Dark text color */
+}
+
+/* Style the search input container */
+.search-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none; /* Remove outline on focus */
+}
+
+.input-container::placeholder {
+    color: #aaa; /* Placeholder text color */
+}
+
+/* Style the search results container */
+.results-container {
+    display: none; /* Hide results container by default */
+    width: 300px;
+    max-height: 300px; /* Set maximum height for scroll */
+    overflow-y: auto; /* Enable vertical scrolling for overflow */
+    padding: 10px;
+    background-color: #fff; /* White background for results */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+}
+
+/* Style individual result items */
+.results-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.results-container li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee; /* Separator between items */
+    color: #333; /* Default text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: color 0.3s ease; /* Smooth color transition */
+    line-height: 1.5; /* Increase line height to accommodate larger text */
+}
+
+.results-container li:hover {
+    color: #007bff; /* Highlight color on hover */
+    font-weight: bold; /* Bold font on hover */
+}
+
+/* Style the country name within each list item */
+.results-container li .country-name {
+    font-weight: bold; /* Bold font for country name */
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 400px) {
+    .input-container {
+        width: 70%; /* Full width on smaller screens */
+    }
+
+    .results-container {
+        width: 70%; /* Full width on smaller screens */
+    }
+}
